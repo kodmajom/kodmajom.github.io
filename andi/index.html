@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nézd, Andi! Könyv!</title>
+    <meta name="author" content="kódmajom">
+    <meta property="og:title" content="Nézd, Andi! Könyv!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kodmajom.github.io/andi/">
+    <meta property="og:description" content="móka és kacagás vicces kedvű karácsonyozóknak.">
+    <meta property="og:image" content="index.jpg">
+    <link rel="canonical" href="https://kodmajom.github.io/andi/">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+    <script src="script.min.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Nézd, Andi! Könyv! – könyvborító generátor</h1>
+        </header>
+        <section>
+            <h2>Adatok</h2>
+            Könyvet vettél az Andi-rajongó szeretteidnek ajándékba, és szeretnéd megviccelni őket? Mérd le a könyv
+            szélességét, magasságát és vastagságát, kattints rá a <strong>csináld!</strong> gombra, és nyomtasd ki a
+            borítót!<br>
+            <small>1-2 millimétert nyugodtan számolj rá az egyes méretekre. Egy átlagos könyv borítója egy A3-as lapra
+                fér rá.</small><br>
+            Jó ajándékbontogatást!
+            <form action="#">
+                <ul>
+                    <li><label for="w">Szélesség </label><input type="number" name="w" id="w" min="50" max="300"
+                            value="141"> mm</li>
+                    <li><label for="h">Magasság </label><input type="number" name="h" id="h" min="50" max="400"
+                            value="200"> mm</li>
+                    <li><label for="t">Vastagság </label><input type="number" name="t" id="t" min="5" max="100"
+                            value="30"> mm</li>
+                    <li><label for="j">Fül szélessége </label><input type="number" name="j" id="j" min="15" max="150"
+                            value="30"> mm</li>
+                    <li><button id="start">Csináld!</button></li>
+                </ul>
+            </form>
+        </section>
+        <aside>
+            <h2>PDF</h2>
+            <span>Először generálj egy borítót!</span>
+            <a href="#" id="link" style="display: none;" target="_blank">Letöltés</a><br>
+            <iframe id="pdf"></iframe>
+            <img src="img/andi_borito.jpg" id="andi" class="hidden" alt="" style="display: none;">
+            <img src="img/gerinc.png" id="spine" class="hidden" alt="" style="display: none;">
+            <img src="img/hatso.png" id="back" class="hidden" alt="" style="display: none;">
+        </aside>
+        <footer>
+            <iframe
+                src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fkodmajom.github.io%2Fandi%2F&layout=button&size=large&width=77&height=28&appId"
+                width="110" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><br>
+            <strong>Humortalan apróbetűs szöveg</strong><br>Ez a honlap egy ártalmatlan vicc, egy geg, egy paródia.
+            A generált borító NEM Andi könyvének borítója, hanem annak újraértelmezése, egy művészeti alkotás. Amúgy meg
+            vegye meg mindenki az <a href="https://www.google.com/search?q=andi+k%C3%B6nyve">eredeti könyvet</a>. Ha
+            mondanál nekem valamit, írj a kod.majom kukac gmail pont com címre.
+        </footer>
+    </main>
+</body>
+
+</html>
